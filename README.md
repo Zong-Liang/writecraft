@@ -8,14 +8,15 @@ Writecraft 是一个内容构建与专业写作 Skill。它从读者需要解决
 
 ## 在 Codex 中使用
 
-下载仓库后，在仓库根目录运行以下命令，将 `skills/writecraft/` 安装到个人 Skill 目录。若已安装同名 Skill，先比较两个版本，再决定是否替换。
+在 Codex 对话中发送下面这句话。
 
-```sh
-mkdir -p "$HOME/.agents/skills"
-cp -R skills/writecraft "$HOME/.agents/skills/"
+```text
+$skill-installer 从 https://github.com/Zong-Liang/writecraft/tree/main/skills/writecraft 安装 Writecraft
 ```
 
-项目内共享时，将 `skills/writecraft/` 放到该项目的 `.agents/skills/`。其他支持 Agent Skills 目录的客户端可按各自的导入方式安装。[Codex Skill 文档](https://learn.chatgpt.com/docs/build-skills) · [Agent Skills 格式规范](https://agentskills.io/specification)
+安装完成后，直接描述写作需求。如果 Skill 列表没有显示 Writecraft，可重启 Codex。
+
+已下载仓库时，也可以将整个 `skills/writecraft/` 目录复制到 `~/.agents/skills/`。项目内共享时，复制到项目的 `.agents/skills/`。已安装过 Writecraft 时，在原安装目录更新即可。[Codex Skill 文档](https://learn.chatgpt.com/docs/build-skills) · [Agent Skills 格式规范](https://agentskills.io/specification)
 
 ## 在 Claude Code 中使用
 
