@@ -1,0 +1,12 @@
+{
+  "name": "writecraft",
+  "owner": {"name": "Writecraft"},
+  "metadata": {"description": "Writecraft 的本地 Claude Code 插件安装源。"},
+  "plugins": [
+    {
+      "name": "writecraft",
+      "source": "./",
+      "description": "内容构建与专业写作：成稿、结构重组、润色、翻译、总结与审查。"
+    }
+  ]
+}

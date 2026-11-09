@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writecraft"
+  short_description: "Develop, structure, and edit evidence-based writing"
+  default_prompt: "用 $writecraft 把这些材料整理成一篇结构清楚、有依据的文稿。"
