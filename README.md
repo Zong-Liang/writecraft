@@ -31,14 +31,15 @@ $skill-installer 从 https://github.com/Zong-Liang/writecraft/tree/main/skills/w
 
 ## 使用示例
 
-在对话中直接描述你想完成的事，有材料就一起提供。Writecraft 会结合请求和材料判断交付形式、结构和修改幅度。
+在对话中直接描述你想完成的事，有材料就一起提供。Writecraft 按任务要求决定修改幅度，并根据读者已有知识和使用场景安排解释顺序与详略。短邮件和消息通常用自然段落，保留必要的步骤和限制。
 
 - 我想给工程经理写一份 E2E 自动化测试试点方案，附件是团队现状和约束。
-- 帮我把这份会议记录整理成一封发给项目组的邮件。
+- 把这份订单事件投递材料写成两版说明，一版供初学者学习，一版供值班工程师在恢复现场查用。
+- 帮我把这份会议记录整理成一封发给项目组的简短邮件。
 - 这段英文摘要读起来不太自然，帮我润色一下。
 
 Skill 的入口是 [SKILL.md](skills/writecraft/SKILL.md)。[内容构建与结构设计](skills/writecraft/references/content-development.md)和[专业编辑与双语表达](skills/writecraft/references/editing.md)按任务需要读取。安装无需额外脚本或依赖。
 
-## 许可
+## 来源与许可
 
-采用 [MIT 许可证](LICENSE)。
+项目采用 [MIT 许可证](LICENSE)。
