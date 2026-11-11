@@ -40,6 +40,8 @@ $skill-installer 从 https://github.com/Zong-Liang/writecraft/tree/main/skills/w
 
 Skill 的入口是 [SKILL.md](skills/writecraft/SKILL.md)。[内容构建与结构设计](skills/writecraft/references/content-development.md)和[专业编辑与双语表达](skills/writecraft/references/editing.md)按任务需要读取。安装无需额外脚本或依赖。
 
+维护时可使用仓库中的[行为验证案例与判据](evals/README.md)检查修改效果。
+
 ## 来源与许可
 
 项目采用 [MIT 许可证](LICENSE)。
