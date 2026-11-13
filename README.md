@@ -77,7 +77,7 @@ $skill-installer 从 https://github.com/Zong-Liang/writecraft/tree/main/skills/w
 | [专业编辑与双语表达](skills/writecraft/references/editing.md) | 按授权诊断问题，调整重心、细节与节奏，处理去 AI 味、翻译、压缩和保真 |
 | [行为验证判据](evals/README.md)与[验证请求](evals/prompts.md) | 检查保真与实际可用性，以及用途、阅读方式和授权变化时的处理差异 |
 
-修改 Skill 后，向执行者提供请求与技能，保存原始输出后再对照判据评审。当前包含 A–S 共 19 个案例，覆盖基础保真、用途对照、混合文档、材料冲突、双语与新文种迁移。执行方式、输出与结论见[全面优化验证记录](evals/2026-11-11-comprehensive-results.md)；[原版本记录](evals/2026-11-11-results.md)保留供追溯。
+修改 Skill 后，向执行者提供请求与技能，保存原始输出后再对照判据评审。当前包含 A–T 共 20 个案例，覆盖基础保真、用途对照、混合文档、材料冲突、双语、新文种迁移与证据充分时的表态。
 
 ## 许可
 
