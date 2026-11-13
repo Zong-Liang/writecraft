@@ -46,7 +46,7 @@ $skill-installer 从 https://github.com/Zong-Liang/writecraft/tree/main/skills/w
 把仓库添加为 marketplace 后安装，之后可直接拉取更新：
 
 ```bash
-codex plugin marketplace add Zong-Liang/writecraft
+codex plugin marketplace add git@github.com:Zong-Liang/writecraft.git
 codex plugin add writecraft@writecraft
 ```
 
@@ -62,7 +62,7 @@ codex plugin add writecraft@writecraft
 把仓库添加为 marketplace 后安装：
 
 ```bash
-claude plugin marketplace add Zong-Liang/writecraft
+claude plugin marketplace add git@github.com:Zong-Liang/writecraft.git
 claude plugin install writecraft@writecraft
 ```
 
@@ -73,7 +73,7 @@ claude plugin marketplace update writecraft
 claude plugin update writecraft@writecraft
 ```
 
-会话内也可使用对应的 `/plugin` 命令。开发时可把 `Zong-Liang/writecraft` 换成本地仓库路径。也可将 `skills/writecraft/` 复制到 `~/.claude/skills/` 作为独立技能使用，但这种方式需要手动更新。
+会话内也可使用对应的 `/plugin` 命令。开发时可把仓库地址换成本地仓库路径。也可将 `skills/writecraft/` 复制到 `~/.claude/skills/` 作为独立技能使用，但这种方式需要手动更新。
 
 插件以 `version` 判断是否有新版本。发布时同步更新 `.claude-plugin/plugin.json`、`.codex-plugin/plugin.json` 和 `skills/writecraft/version.json` 中的版本号。
 
