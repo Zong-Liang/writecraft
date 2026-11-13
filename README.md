@@ -41,16 +41,41 @@ $skill-installer 从 https://github.com/Zong-Liang/writecraft/tree/main/skills/w
 
 已下载仓库时，也可以将整个 `skills/writecraft/` 目录复制到 `~/.agents/skills/`。项目内共享时，复制到项目的 `.agents/skills/`。已安装过 Writecraft 时，在原安装目录更新即可。[Codex Skill 文档](https://learn.chatgpt.com/docs/build-skills) · [Agent Skills 格式规范](https://agentskills.io/specification)
 
-## 在 Claude Code 中使用
+### 作为 Codex 插件安装
 
-从本地仓库安装插件，把示例路径替换为实际目录。
+把仓库添加为 marketplace 后安装，之后可直接拉取更新：
 
-```text
-/plugin marketplace add /path/to/writecraft
-/plugin install writecraft@writecraft
+```bash
+codex plugin marketplace add Zong-Liang/writecraft
+codex plugin add writecraft@writecraft
 ```
 
-也可将 `skills/writecraft/` 复制到 `~/.claude/skills/` 作为独立技能使用。
+更新时先刷新 marketplace，再重新安装新版本：
+
+```bash
+codex plugin marketplace upgrade writecraft
+codex plugin add writecraft@writecraft
+```
+
+## 在 Claude Code 中使用
+
+把仓库添加为 marketplace 后安装：
+
+```bash
+claude plugin marketplace add Zong-Liang/writecraft
+claude plugin install writecraft@writecraft
+```
+
+更新后重启 Claude Code 生效：
+
+```bash
+claude plugin marketplace update writecraft
+claude plugin update writecraft@writecraft
+```
+
+会话内也可使用对应的 `/plugin` 命令。开发时可把 `Zong-Liang/writecraft` 换成本地仓库路径。也可将 `skills/writecraft/` 复制到 `~/.claude/skills/` 作为独立技能使用，但这种方式需要手动更新。
+
+插件以 `version` 判断是否有新版本。发布时同步更新 `.claude-plugin/plugin.json`、`.codex-plugin/plugin.json` 和 `skills/writecraft/version.json` 中的版本号。
 
 ## 使用示例
 

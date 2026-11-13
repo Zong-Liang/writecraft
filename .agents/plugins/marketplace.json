@@ -1,0 +1,19 @@
+{
+  "name": "writecraft",
+  "interface": {
+    "displayName": "Writecraft"
+  },
+  "plugins": [
+    {
+      "name": "writecraft",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    }
+  ]
+}
