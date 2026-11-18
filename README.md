@@ -29,53 +29,33 @@ Writecraft 是一个内容构建与专业写作 Skill，涵盖从材料整理、
 
 Writecraft 可配合全局 Custom instructions 使用，在具体写作任务中落实材料处理、修改幅度、结构选择和交付检查。具体规则见 [SKILL.md](skills/writecraft/SKILL.md)。
 
-## 在 Codex 中使用
+## 安装与更新
 
-在 Codex 对话中发送下面这句话。
+### Codex
 
-```text
-$skill-installer 从 https://github.com/Zong-Liang/writecraft/tree/main/skills/writecraft 安装 Writecraft
-```
+首次安装时添加 Writecraft 市场并安装插件。
 
-安装完成后，直接描述写作需求。如果 Skill 列表没有显示 Writecraft，可重启 Codex。
-
-已下载仓库时，也可以将整个 `skills/writecraft/` 目录复制到 `~/.agents/skills/`。项目内共享时，复制到项目的 `.agents/skills/`。已安装过 Writecraft 时，在原安装目录更新即可。[Codex Skill 文档](https://learn.chatgpt.com/docs/build-skills) · [Agent Skills 格式规范](https://agentskills.io/specification)
-
-### 作为 Codex 插件安装
-
-把仓库添加为 marketplace 后安装，之后可直接拉取更新：
-
-```bash
-codex plugin marketplace add git@github.com:Zong-Liang/writecraft.git
+```sh
+codex plugin marketplace add git@github.com:Zong-Liang/writecraft.git --ref main
 codex plugin add writecraft@writecraft
 ```
 
-更新时先刷新 marketplace，再重新安装新版本：
+后续运行 `codex plugin marketplace upgrade writecraft`。在新对话中直接描述写作需求，或选择 `$writecraft:writecraft`。
 
-```bash
-codex plugin marketplace upgrade writecraft
-codex plugin add writecraft@writecraft
-```
+### Claude Code
 
-## 在 Claude Code 中使用
-
-把仓库添加为 marketplace 后安装：
-
-```bash
+```sh
 claude plugin marketplace add git@github.com:Zong-Liang/writecraft.git
 claude plugin install writecraft@writecraft
 ```
 
-更新后重启 Claude Code 生效：
+后续运行 `claude plugin update writecraft@writecraft`，再在会话中运行 `/reload-plugins` 或重启 Claude Code。
 
-```bash
-claude plugin marketplace update writecraft
-claude plugin update writecraft@writecraft
-```
+### 从独立技能迁移
 
-会话内也可使用对应的 `/plugin` 命令。开发时可把仓库地址换成本地仓库路径。也可将 `skills/writecraft/` 复制到 `~/.claude/skills/` 作为独立技能使用，但这种方式需要手动更新。
+此前通过 `$skill-installer` 或手动复制安装的用户，先确认对应宿主已启用插件，再将原技能目录中的 `writecraft/` 移到技能搜索路径外备份。已经通过 Git 市场安装的用户可直接运行更新命令。
 
-插件以 `version` 判断是否有新版本。发布时同步更新 `.claude-plugin/plugin.json`、`.codex-plugin/plugin.json` 和 `skills/writecraft/version.json` 中的版本号。
+发布新版时同步更新 `.claude-plugin/plugin.json`、`.codex-plugin/plugin.json` 和 `skills/writecraft/version.json` 中的版本号。
 
 ## 使用示例
 
